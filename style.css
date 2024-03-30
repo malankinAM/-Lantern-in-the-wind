@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+body{
+        font-family: "Commissioner", sans-serif;
+        font-weight: 600;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-image:url(./glitch-effect-on-a-black-background.jpg) ;
+        color:#ffffff;
+        background-size: cover;
+}
+
+header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px;
+        box-sizing: border-box;
+        height: 100px;
+}
+
+header ul{
+        display: flex;
+        list-style: none;
+        gap: 50px;
+}
+
+@property --rotate{
+        syntax: " <angle> ";
+        initial-value: 0deg;
+        inherits: false;
+}
+
+.light{
+        background-image:
+         conic-gradient(
+        from var(--rotate) at 29% 10%,
+        #0b1012 40%,
+        #ffffff,
+        #0b1012 60%
+        );
+        font-size: 200px;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: rotateLight
+                    3s ease-in-out infinite
+                    alternate;
+}
+@keyframes rotateLight{
+        from{
+                --rotate:0.15turn
+        }to{
+                --rotate:-0.15turn;
+        }
+}
+
+li{
+        font-size: 24px;
+        color: yellow;
+}
